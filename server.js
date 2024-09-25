@@ -7,7 +7,8 @@ connectDb();
 const app=express();
 
 app.use(express.json());
-app.use("/api/contact", require("./routes/contactRoutes.js"));
+app.use("/api/contacts", require("./routes/contactRoutes.js"));
+app.use("/api/users", require("./routes/userRoutes.js"));
 app.use(errorHandler);
 
 const port=process.env.PORT || 5000;
